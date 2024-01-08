@@ -28,11 +28,11 @@ The script allows for customization through command-line arguments. While all ar
 
 2. Either use the function directly in PS1 or set a global variable in `.bashrc`:
 
--  ```shell
-		PS1="[...] \$(git_return <ARG1> <ARG2> ...) [...]"
-	```
-	or
--  ```shell
-		PROMPT_COMMAND='git_set <ARG1> <ARG2> ...'
-		PS1="[...] \$GIT_BRANCH_INFO [...]"
-	```
+```shell
+PS1="[...] \$(git_return <ARG1> <ARG2> ...) [...]"
+```
+or
+```shell
+PROMPT_COMMAND='git_set <ARG1> <ARG2> ...'
+PS1="[...] \$GIT_BRANCH_INFO [...]"
+```
