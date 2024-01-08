@@ -14,11 +14,11 @@ The script allows for customization through command-line arguments. While all ar
 1 - If "1", then add color; "2" also add color to brackets
 2 - If "1", then add symbols
 3 - If "1", then add numbers in addition to symbols
-4 - Set a symbol for untracked changes							default	'!'
-5 - Set a symbol for tracked changes							default	'+'
-6 - Set a symbol for starting bracket							default	''
-7 - Set a symbol for ending bracket								default	''
-8 - Set an escape sequence for uncommitted changes				default	'\e[31m' (red)
+4 - Set a symbol for untracked changes					default	'!'
+5 - Set a symbol for tracked changes					default	'+'
+6 - Set a symbol for starting bracket					default	''
+7 - Set a symbol for ending bracket					default	''
+8 - Set an escape sequence for uncommitted changes			default	'\e[31m' (red)
 9 - Set an escape sequence for no changes in repository			default	'\e[32m' (green)
 ```
 
