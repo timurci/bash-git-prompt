@@ -36,3 +36,8 @@ or
 PROMPT_COMMAND='git_set <ARG1> <ARG2> ...'
 PS1="[...] \$GIT_BRANCH_INFO [...]"
 ```
+
+## TODO
+- Add information for staged/unstaged files
+- Separately customize information for (un)tracked, (un)staged files
+- Switch to flags/options based customization
