@@ -8,18 +8,26 @@ The script provides two functions, `git_return()` displays or returns the curren
 
 ### Arguments
 
-The script allows for customization through command-line arguments. While all arguments are optional, the user should specify all previous arguments that comes before a chosen argument.
-
 ```
-1 - If "1", then add color; "2" also add color to brackets
-2 - If "1", then add symbols
-3 - If "1", then add numbers in addition to symbols
-4 - Set a symbol for untracked changes					default	'!'
-5 - Set a symbol for tracked changes					default	'+'
-6 - Set a symbol for starting bracket					default	''
-7 - Set a symbol for ending bracket					default	''
-8 - Set an escape sequence for uncommitted changes			default	'\e[31m' (red)
-9 - Set an escape sequence for no changes in repository			default	'\e[32m' (green)
+-v : Adds untracked, unstaged, staged, added, deleted, modified files information.
+
+-c : Enables prompt color
+-b : Enables bracket color (enables -c).
+-U [value]: Sets unchanged repo prompt color with an escape sequence (enables -c).
+-M [value]: Sets modified repo prompt color with an escape sequence (enables -c).
+
+-O [value]: Sets opening bracket symbol
+-C [value]: Sets closing bracket symbol
+-n [value]: Sets untracked info symbol
+-u [value]: Sets unstaged info symbol
+-s [value]: Sets staged info symbol
+-a [value]: Sets added info symbol
+-d [value]: Sets deleted info symbol
+-m [value]: Sets modified info symbol
+
+-S [value]: Sets the type of info to suppress in verbose mode
+	Example:
+		-S 'da' # Omits added and deleted file information from prompt
 ```
 
 ### Prompt
@@ -38,6 +46,4 @@ PS1="[...] \$GIT_BRANCH_INFO [...]"
 ```
 
 ## TODO
-- Add information for staged/unstaged files
-- Separately customize information for (un)tracked, (un)staged files
-- Switch to flags/options based customization
+- Separately customize information for (un)tracked, (un)staged etc. files
