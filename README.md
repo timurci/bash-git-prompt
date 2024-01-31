@@ -47,3 +47,4 @@ PS1="[...] \$GIT_BRANCH_INFO [...]"
 
 ## TODO
 - Separately customize information for (un)tracked, (un)staged etc. files
+- Add more complex information and customization (e.g. unstaged modified, staged added files)
