@@ -90,39 +90,6 @@ git_return () {
 					"$added_symbol" "$deleted_symbol" "$modified_symbol")
 		fi
 
-		# Add symbols (if necessary)
-		if [ "$2" == '1' ]; then
-			local loc_untracked_sym=''
-			local loc_tracked_sym=''
-			local loc_combined_n=$(git status -s --porcelain=v1 -unormal | wc -l)
-			local loc_tracked_n=$(git status -s --porcelain=v1 -uno | wc -l)
-			local loc_untracked_n=$(( loc_combined_n - loc_tracked_n ))
-		
-			# Check if there are tracked changes
-			if [ "$loc_tracked_n" -ne 0 ]; then
-				loc_tracked_sym=' +'
-				if [[ $5 ]]; then
-					loc_tracked_sym=" $5"
-				fi
-				if [ "$3" == '1' ]; then
-					loc_tracked_sym+=" $loc_tracked_n"
-				fi
-			fi
-			
-			# Check if there are untracked changes
-			if [ "$loc_untracked_n" -ne 0 ]; then
-				loc_untracked_sym=' !'
-				if [[ $4 ]]; then
-					loc_untracked_sym=" $4"
-				fi
-				if [ "$3" == '1' ]; then
-					loc_untracked_sym+=" $loc_untracked_n"
-				fi
-			fi
-			
-			loc_post_message="${loc_untracked_sym}${loc_tracked_sym}"
-		fi
-
 		echo -e ${open_bracket}${status_color}${branch}${reset_color}${close_bracket}
 	fi
 }
