@@ -46,7 +46,7 @@ git_return () {
 		local status_color=''
 		local reset_color='\e[39m' 
 
-		while getopts ":vcbU:M:O:C:n:u:s:m:S:" opt; do
+		while getopts ":vcbU:M:O:C:n:u:s:a:d:m:S:" opt; do
 			case $opt in
 				v) verbose=true ;;
 				c) color=true ;;
