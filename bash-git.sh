@@ -83,6 +83,14 @@ git_return () {
 			fi
 		fi
 
+		if [ -z "$branch" ]; then
+			# If a commit is checked out instead of a branch
+			branch=$(git --no-pager show --oneline -s)
+			if $color; then
+				status_color=$modified_color
+			fi
+		fi
+
 		if $verbose; then
 			branch+=$(_simple_git_verbose \
 					"$suppress_options" \
