@@ -4,7 +4,7 @@ A minimal and customizable Bash script for dynamically retrieving and displaying
 
 The script provides two functions, `git_return()` displays or returns the current branch information and `git_set()` sets global variable `GIT_BRANCH_INFO` containing the same value. Both functions can receive the same arguments. 
 
-![Prompt-example-demonstration](/assets/images/promp-example.gif "Example prompt demonstration")
+![Prompt-example-demonstration](/assets/images/prompt-example.gif "Example prompt demonstration")
 
 ## Usage
 
